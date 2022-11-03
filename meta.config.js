@@ -6,8 +6,8 @@ export default {
     'React',
     'Solidjs',
     'Webpack',
-    'vite',
-    'umi',
+    'Vite',
+    'Umi',
     'qiankun',
   ],
 };

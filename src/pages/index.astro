@@ -73,23 +73,23 @@ const { name, skills } = config;
         >
           <li class="flow-root">
             <span class="-m-2 block p-2 text-gray-600">
-              1、深入了解react及其相关生态圈技术。了解react
-              hook的实际应用、react的fiber架构演进与react-reconciler，scheduler两大工作循环，熟悉react任务调度中最小堆算法。
+              1、深入了解react及其相关生态圈技术。熟悉react
+              hook的实现原理与实际应用；熟悉react的fiber架构演进与react-reconciler，scheduler两大工作循环；熟悉react任务调度相关的最小堆算法。
             </span>
           </li>
           <li class="flow-root">
             <span class="-m-2 block p-2 text-gray-600">
-              2、了解前端业内常见的可视化图表库，如antv，ECharts等，可以基于业务进行定制可视化开发。
+              2、熟悉前端业内常见的可视化图表库，如antv，ECharts等，可以基于业务进行定制可视化图表开发。
             </span>
           </li>
           <li class="flow-root">
             <span class="-m-2 block p-2 text-gray-600">
-              3、了解node.js前端基建生态，可以进行前端cli工具开发；熟悉eslint，prettier，可以开发项目定制eslint插件。
+              3、熟悉基于node.js的前端基建生态，如babel、webpack、rollup等，可以进行前端cli工具开发；熟悉前端代码规范工具，如eslint、prettier，可以开发项目定制eslint插件。
             </span>
           </li>
           <li class="flow-root">
             <span class="-m-2 block p-2 text-gray-600">
-              4、在项目中实践过monorepo架构，可以使用lerna+yarn或pnpm进行项目monopepo演进；目前在实践前端TDD，了解过jest、vitest。
+              4、在项目中实践过monorepo架构，可以使用lerna+yarn或pnpm进行项目monopepo架构演进；目前在实践前端TDD，了解过jest、vitest的使用，可以搭建前端项目测试环境。
             </span>
           </li>
         </ul>
@@ -123,7 +123,7 @@ const { name, skills } = config;
                   class="flex flex-col space-y-6"
                 >
                   <li class="flow-root">
-                    灵思疫情漫入调查行业应用，基于2021年底疫情反复，宜昌市政府需要处理大量返乡人员的密接信息处理，电话通知而开发的应用平台，以应用形式，帮助基础防控工作人员进行流调溯源，电话通知。
+                    灵思疫情漫入调查行业应用，基于2021年底疫情反复，宜昌市政府需要对大量返乡人员进行密接信息处理、电话通知，因而开发了此应用平台，以应用形式，帮助基层防控工作人员进行密接人员流调溯源，电话通知。
                   </li>
                 </ul>
                 <p
@@ -141,10 +141,10 @@ const { name, skills } = config;
                     1、灵思疫情漫入调查行业应用整体可视化图表搭建。技术选型决定使用antv团队封装的图形组件库Bizcharts，在Bizcharts的基础上基于业务进行了二次封装，让组内其他开发同学使用组件时只需通过传入对应config就可以生成对应类型图表。
                   </li>
                   <li class="flow-root">
-                    2、灵思疫情漫入调查行业应用数据统计业务开发。基于antd对Table组件进行了二次封装，通过暴露一个useTable的自定义hooks来使用表格常见的CRUD对应api。
+                    2、灵思疫情漫入调查行业应用数据统计业务开发。基于antd对Table组件进行了二次封装，通过暴露一个useTable的自定义hook来使用表格常见的CRUD对应api，提升组内开发效率。
                   </li>
                   <li class="flow-root">
-                    3、灵思疫情漫入调查行业应用统计了各区密接人员的流调信息，需要通过网页导出excel，封装了此业务的自定义hooks。
+                    3、灵思疫情漫入调查行业应用统计了各区密接人员的流调信息，需要通过网页导出excel，封装了此业务的自定义hook供相关开发同学使用。
                   </li>
                 </ul>
               </div>
@@ -179,18 +179,15 @@ const { name, skills } = config;
                   class="flex flex-col space-y-6"
                 >
                   <li class="flow-root">
-                    1、灵思标准平台微前端架构演进。随着项目业务开发，原有单页
-                    SPA
-                    应用的开发体验已经很差，代码改动热更已达60s，基于该问题，组内选用
-                    umi 的 qiankun 插件进行模块重拆分，拆分后模块热更缩短至5s。
+                    1、灵思标准平台微前端架构演进。随着项目业务开发，原有单页SPA应用的开发体验已经很差，代码改动热更已达60s，基于该问题，组内选用
+                    umi 的 qiankun插件进行模块重拆分， 拆分后模块热更缩短至5s。
                   </li>
                   <li class="flow-root">
                     2、灵思标准平台代码仓库monorepo架构演进。在模块拆分后，各模块独立为单独的gitlab仓库，需要统一管理，组内研究讨论后决定使用git
-                    submodule+lerna+yarn进行monorepo的仓库管理，实现了更详细的职责拆分，让各业务同学于dev环境下无需启动全部子应用而只需要关心个人模块。
+                    submodule+lerna+yarn进行monorepo的仓库管理，实现了更详细的职责拆分，让各业务同学于dev环境下无需启动全部子应用而只需要关心个人开发的应用模块即可。
                   </li>
                   <li class="flow-root">
-                    3、灵思标准平台视觉识别模块功能开发。该功能是类似瀑布流的视觉信息展示，利用列表展现云平台所有关联摄像机的抓拍信息，基于业务定位了一段时间的抓拍，故采用了react-virtualized虚拟列表进行大数据量渲染处理
-                    ，防止页面卡顿。
+                    3、灵思标准平台视觉识别模块功能开发。该功能是类似瀑布流的视觉信息展示，利用列表展现云平台所有关联摄像机的抓拍信息，基于业务定位了一段时间的抓拍，故采用了react-virtualized虚拟列表进行大数据量渲染处理，防止页面卡顿。
                   </li>
                 </ul>
               </div>
@@ -221,9 +218,8 @@ const { name, skills } = config;
                   class="flex flex-col space-y-6"
                 >
                   <li class="flow-root">
-                    云服务器 ECS（Elastic Compute Service
-                    ）是一种弹性可伸缩的计算服务，助您降低 IT
-                    成本，提升运维效率，使您更专注于核心业务创新。控制台部分的主体功能就是将一些常见的操作场景以白屏化展现在前端而不需要通过手动操作服务器来实现。
+                    云服务器 ECS（Elastic Compute
+                    Service）是一种弹性可伸缩的计算服务，助您降低IT成本，提升运维效率，使您更专注于核心业务创新。主体功能就是将一些常见的服务器操作场景以管理控制台的方式展现在前端而不需要通过shell脚本操作服务器来实现。
                   </li>
                 </ul>
                 <p
@@ -243,7 +239,7 @@ const { name, skills } = config;
                   </li>
                   <li class="flow-root">
                     2、云服务器 ECS
-                     控制台整体操作日志跟踪功能开发，将关于实例的功能落地化呈现，不仅仅是去检查关联实例的操作，升级为定位一段时间内所有关联资源的操作。使用了G6作为图层UI，可以让用户通过可视化的方式了解各资源间的关系，从而降低运维成本。
+                    控制台整体操作日志跟踪功能开发，将关于实例的功能落地化呈现，不仅仅是去检查关联实例的操作，升级为定位一段时间内所有关联资源的操作。使用了G6作为图层UI，可以让用户通过可视化的方式了解各资源间的关系，从而降低运维成本。
                   </li>
                 </ul>
               </div>
@@ -266,8 +262,8 @@ const { name, skills } = config;
                 >
                   <li class="flow-root">
                     阿里云弹性容器实例（Elastic Container Instance ）是
-                    Serverless 和容器化的弹性计算服务。您无需管理底层部分的 ECS
-                    服务器，只需要提供打包好的镜像，即可运行容器，并仅为容器实际运行消耗的资源付费。
+                    Serverless 和容器化的弹性计算服务。您无需管理底层部分的
+                    ECS服务器，只需要提供打包好的镜像，即可运行容器，并仅为容器实际运行消耗的资源付费。
                   </li>
                 </ul>
                 <p
@@ -283,8 +279,8 @@ const { name, skills } = config;
                 >
                   <li class="flow-root">
                     1、弹性容器实例 ECI
-                    控制台整体项目开发。使用cra工具进行了项目搭建，使用eslint+prettier作为代码规范，选用react17为UI层，使用react
-                    hooks进行页面开发。
+                    控制台整体项目前端功能开发。使用create-react-app工具进行了项目搭建，使用eslint+prettier作为代码规范工具，选用react
+                    17为UI层，使用react hook进行页面功能开发。
                   </li>
                   <li class="flow-root">
                     2、弹性容器实例 ECI
